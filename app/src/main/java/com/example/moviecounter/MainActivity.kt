@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.moviecounter.ui.theme.MovieCounterTheme
+import androidx.compose.material3.Card
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,9 +44,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = "Bienvenido a MovieCounter"
-        )
+        Card {
+            Text(
+                text = "Bienvenido a MovieCounter",
+                modifier = Modifier.padding(16.dp)
+            )
+        }
 
         Spacer(modifier = Modifier.height(16.dp))
 
